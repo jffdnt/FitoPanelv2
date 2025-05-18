@@ -153,7 +153,11 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
 
             // hide the upload button - other style options can be added here
             const canvasStyleOptions = {
-                hideUploadButton: true
+                hideUploadButton: true,
+                botAvatarImage: 'https://freepngimg.com/thumb/dog/163165-puppy-dog-face-free-transparent-image-hd.png',
+                botAvatarBackgroundColor: 'white',
+                userAvatarImage: 'https://zetaphotoservice.azurewebsites.net/microsoft/photo/' + props.userEmail,
+                userAvatarBackgroundColor: 'white',
             }
         
             // Render webchat
@@ -243,7 +247,9 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                 type={PanelType.medium}
                 styles={{
                     main: { width: '450px', maxWidth: '1000px' },
-                    contentInner: { padding: '0px' }
+                    contentInner: { padding: '0px' },
+                    header: { backgroundColor: '#0057B8', color: 'white' },
+                    headerText: { color: 'white' }
                 }}
             >
                 <div id="chatContainer" style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
