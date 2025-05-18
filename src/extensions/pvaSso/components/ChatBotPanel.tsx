@@ -238,7 +238,16 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                 </Stack>
             </DefaultButton>
             <Panel
-                headerText={props.botName}
+                onRenderHeader={() => (
+                  <div style={{
+                    background: '#0057B8',
+                    color: 'white',
+                    padding: '16px 24px',
+                    margin: 0
+                  }}>
+                    <span style={{ fontSize: 20, fontWeight: 'bold' }}>{props.botName}</span>
+                  </div>
+                )}
                 isOpen={isOpen}
                 onDismiss={dismissPanel}
                 onOpen={handlePanelOpen}
@@ -247,9 +256,7 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                 type={PanelType.medium}
                 styles={{
                     main: { width: '450px', maxWidth: '1000px' },
-                    contentInner: { padding: '0px' },
-                    header: { backgroundColor: '#0057B8', color: 'white' },
-                    headerText: { color: 'white' }
+                    contentInner: { padding: '0px' }
                 }}
             >
                 <div id="chatContainer" style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
