@@ -156,8 +156,10 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                 hideUploadButton: true,
                 botAvatarImage: 'https://freepngimg.com/thumb/dog/163165-puppy-dog-face-free-transparent-image-hd.png',
                 botAvatarBackgroundColor: 'white',
+                botAvatarInitials: 'FT',
                 userAvatarImage: 'https://zetaphotoservice.azurewebsites.net/microsoft/photo/' + props.userEmail,
                 userAvatarBackgroundColor: 'white',
+                userAvatarInitials: 'JD',
             }
         
             // Render webchat
@@ -253,9 +255,9 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                 onOpen={handlePanelOpen}
                 isLightDismiss={true}
                 closeButtonAriaLabel="Close"
-                type={PanelType.medium}
+                type={PanelType.smallFixedFar}
                 styles={{
-                    main: { width: '450px', maxWidth: '1000px' },
+                    header: { paddingTop: 0, marginTop: 0 },
                     contentInner: { padding: '0px' }
                 }}
             >
