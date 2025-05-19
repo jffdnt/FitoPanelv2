@@ -8,6 +8,7 @@ import { Dispatch } from 'redux'
 import { useRef } from "react";
 import { Text } from 'office-ui-fabric-react/lib/Text';
 import { Stack } from 'office-ui-fabric-react/lib/Stack';
+import './ChatBotPanelOverrides.css';
 
 import { IChatbotProps } from "./IChatBotProps";
 import MSALWrapper from "./MSALWrapper";
@@ -247,7 +248,7 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                     padding: '16px 24px',
                     margin: 0
                   }}>
-                    <span style={{ fontSize: 20, fontWeight: 'bold' }}>{props.botName}</span>
+                    <span style={{ fontSize: 16, fontWeight: 'bold' }}>{props.botName}</span>
                   </div>
                 )}
                 isOpen={isOpen}
