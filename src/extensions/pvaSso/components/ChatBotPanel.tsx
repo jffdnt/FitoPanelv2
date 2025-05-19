@@ -262,8 +262,15 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                     contentInner: { padding: '0px' }
                 }}
             >
-                <div id="chatContainer" style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
-                    <div ref={webChatRef} role="main" style={{ width: "100%", height: "100%" }}></div>
+                <div id="chatContainer" style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "stretch",
+                    height: "100%",
+                    minHeight: "400px",
+                    flex: 1
+                }}>
+                    <div ref={webChatRef} role="main" style={{ flex: 1, width: "100%", minHeight: 0 }}></div>
                     <div ref={loadingSpinnerRef}><Spinner label="Loading..." style={{ paddingTop: "1rem", paddingBottom: "1rem" }} /></div>
                 </div>
             </Panel>
