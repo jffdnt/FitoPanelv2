@@ -259,7 +259,7 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                 type={PanelType.smallFixedFar}
                 styles={{
                     header: { paddingTop: 0, marginTop: 0 },
-                    contentInner: { padding: '0px' }
+                    contentInner: { padding: '0px', height: '100%' }
                 }}
             >
                 <div id="chatContainer" style={{
@@ -270,7 +270,7 @@ export const PVAChatbotPanel: React.FunctionComponent<IChatbotProps> = (props) =
                     minHeight: "400px",
                     flex: 1
                 }}>
-                    <div ref={webChatRef} role="main" style={{ flex: 1, width: "100%", minHeight: 0 }}></div>
+                    <div ref={webChatRef} role="main" style={{ flex: 1, width: "100%", minHeight: 0, height: '100%' }}></div>
                     <div ref={loadingSpinnerRef}><Spinner label="Loading..." style={{ paddingTop: "1rem", paddingBottom: "1rem" }} /></div>
                 </div>
             </Panel>
